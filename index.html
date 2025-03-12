@@ -20,10 +20,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -35,41 +32,42 @@
             <h1>JMOC Services</h1>
             <p>Your trusted partner for landscaping, pressure washing, and more!</p>
         </div>
-        <!-- Bouncing Arrow -->
         <div class="scroll-down" onclick="scrollToForm()">
             <img src="images/down-arrow.png" alt="Scroll Down">
         </div>
     </header>
 
     <!-- Mega Form -->
-    <section id="mega-form" class="container my-5">
-        <h2 class="text-center">Get a Free Quote</h2>
+    <section id="mega-form">
+        <h2>Get a Free Quote</h2>
         <form action="php/form-handler.php" method="post">
             <div class="mb-3">
                 <label class="form-label">What do you need help with?</label>
-                <select class="form-select" name="service" id="service">
-                    <option value="garbage-bin-cleaning">Garbage Bin Cleaning</option>
-                    <option value="pressure-washing">Pressure Washing</option>
-                    <option value="window-washing">Window Washing</option>
-                    <option value="landscaping">Landscaping</option>
-                    <option value="snow-removal">Snow Removal</option>
-                    <option value="odd-jobs">Odd Jobs</option>
+                <select class="form-select" name="service">
+                    <option>Garbage Bin Cleaning</option>
+                    <option>Pressure Washing</option>
                 </select>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="form-control" name="name" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" name="message" rows="4"></textarea>
-            </div>
+            <input type="text" class="form-control mb-3" name="name" placeholder="Full Name">
+            <input type="email" class="form-control mb-3" name="email" placeholder="Email">
+            <textarea class="form-control mb-3" name="message" placeholder="Message"></textarea>
             <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-container">
+        <h2>Our Work</h2>
+        <div class="large-slideshow">
+            <img src="images/placeholder1.jpg" class="active">
+            <img src="images/placeholder2.jpg">
+            <img src="images/placeholder3.jpg">
+        </div>
+        <div class="small-slideshow">
+            <img src="images/placeholder1.jpg">
+            <img src="images/placeholder2.jpg">
+            <img src="images/placeholder3.jpg">
+        </div>
     </section>
 
     <!-- Footer -->
