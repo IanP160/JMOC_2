@@ -1,6 +1,142 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #1B3A2B; /* Dark Green */
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
-h1, h2, h3 {
+
+a {
+    color: #4CAF50; /* Medium Green */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #66BB6A;
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #000000;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+    font-size: 1.5rem;
     font-weight: bold;
+}
+
+.nav-link {
+    color: #B0B0B0;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+header {
+    background: linear-gradient(rgba(27, 58, 43, 0.8), rgba(27, 58, 43, 0.8)), 
+                url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Form Section */
+section {
+    padding: 2rem 1rem;
+}
+
+form {
+    background-color: #2C4C3B; /* Darker Green */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-label {
+    color: #B0B0B0;
+}
+
+.form-control, .form-select {
+    background-color: #1B3A2B;
+    color: #FFFFFF;
+    border: 1px solid #4CAF50;
+    padding: 0.75rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #66BB6A;
+    box-shadow: 0 0 10px rgba(102, 187, 106, 0.5);
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    padding: 0.75rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #66BB6A;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #B0B0B0;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #4CAF50;
+}
+
+footer a:hover {
+    color: #66BB6A;
 }
