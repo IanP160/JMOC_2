@@ -1,6 +1,9 @@
+/* Import Professional Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #1B3A2B; /* Dark Green */
     color: #FFFFFF;
     margin: 0;
@@ -15,7 +18,8 @@ body {
 
 .navbar-brand,
 .nav-link {
-    color: #FFFFFF !important; /* Ensures navbar text is white */
+    color: #FFFFFF !important; /* Ensures navbar text is visible */
+    font-weight: 600;
 }
 
 .nav-link:hover {
@@ -31,7 +35,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
     width: 100%;
 }
 
@@ -72,7 +75,7 @@ body {
 
 /* Form */
 #mega-form {
-    max-width: 600px; /* Narrower form */
+    max-width: 600px;
     margin: auto;
     text-align: center;
 }
@@ -92,7 +95,7 @@ form {
 }
 
 .btn-primary {
-    background-color: #4CAF50; /* Match theme */
+    background-color: #4CAF50 !important; /* Match theme */
     border: none;
 }
 
@@ -104,15 +107,17 @@ form {
 .gallery-container {
     text-align: center;
     margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .large-slideshow {
-    width: 80%;
-    max-width: 900px;
+    width: 60%;
+    max-width: 800px;
     height: 500px;
     overflow: hidden;
     position: relative;
-    margin: auto;
 }
 
 .large-slideshow img {
@@ -130,12 +135,11 @@ form {
 .small-slideshow {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: space-between;
 }
 
 .small-slideshow img {
-    width: 200px;
+    width: 180px;
     height: 120px;
     opacity: 0.6;
     transition: opacity 0.5s;
@@ -145,6 +149,7 @@ form {
     opacity: 1;
 }
 
+/* Footer */
 footer {
     background-color: #000000;
     color: #B0B0B0;
