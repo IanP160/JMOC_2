@@ -64,20 +64,25 @@
     </section>
 
 
-    <!-- Gallery -->
-    <section class="gallery-container">
-        <h2>Our Work</h2>
-        <div class="large-slideshow">
-            <img src="images/placeholder1.jpg" class="active">
-            <img src="images/placeholder2.jpg">
-            <img src="images/placeholder3.jpg">
-        </div>
-        <div class="small-slideshow">
-            <img src="images/placeholder1.jpg">
-            <img src="images/placeholder2.jpg">
-            <img src="images/placeholder3.jpg">
-        </div>
-    </section>
+<!-- Gallery Section -->
+<section id="gallery" class="wrapper style2 special">
+  <div class="gallery-container" style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+    
+    <div class="gallery-main" style="position: relative;">
+      <button class="gallery-arrow left" onclick="prevSlide()">&#10094;</button>
+      <img id="large-image" src="https://via.placeholder.com/500x300" alt="Gallery Image" style="max-width: 500px; border-radius: 10px;">
+      <button class="gallery-arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+    
+    <div class="gallery-thumbnails" style="display: flex; flex-direction: column; gap: 10px;">
+      <img class="thumbnail" src="https://via.placeholder.com/100x60" onclick="changeImage(0)" alt="Thumb 1" style="width: 100px; cursor: pointer;">
+      <img class="thumbnail" src="https://via.placeholder.com/100x60" onclick="changeImage(1)" alt="Thumb 2" style="width: 100px; cursor: pointer;">
+      <img class="thumbnail" src="https://via.placeholder.com/100x60" onclick="changeImage(2)" alt="Thumb 3" style="width: 100px; cursor: pointer;">
+    </div>
+
+  </div>
+</section>
+
 
 
 
