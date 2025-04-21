@@ -1,7 +1,31 @@
 /* Import Professional Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
+/*Gallery*/
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
 
+.gallery-arrow.left {
+  left: -40px;
+}
+
+.gallery-arrow.right {
+  right: -40px;
+}
+
+.thumbnail.active {
+  outline: 2px solid #90EE90;
+  border-radius: 4px;
+}
 
 /* CTA Section - Adjust to Support Contact Form */
 #cta {
