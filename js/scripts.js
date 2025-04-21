@@ -1,6 +1,7 @@
-// Run all JS when the DOM is ready
+// ============================
+// GALLERY SLIDESHOW LOGIC
+// ============================
 document.addEventListener("DOMContentLoaded", () => {
-  // === Gallery Setup ===
   const galleryImages = [
     "https://via.placeholder.com/500x300?text=Image+1",
     "https://via.placeholder.com/500x300?text=Image+2",
@@ -34,16 +35,19 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index);
   }
 
-  // Expose to global scope if you're using onclick="..." in HTML
+  // Make navigation functions accessible from HTML buttons
   window.prevSlide = prevSlide;
   window.nextSlide = nextSlide;
   window.changeImage = changeImage;
 
+  // Start with the first slide and auto-rotate
   showSlide(currentSlide);
   setInterval(nextSlide, 3000);
 });
 
-// === Google Form Loader (leave outside of DOMContentLoaded so it’s globally available) ===
+// ============================
+// GOOGLE FORM LOADER FUNCTION
+// ============================
 function loadGoogleForm() {
   const value = document.getElementById("service-select").value;
   const container = document.getElementById("google-form-container");
@@ -53,6 +57,7 @@ function loadGoogleForm() {
     pressure: "https://docs.google.com/forms/d/e/1FAIpQLScd593nR5DJau-RJc4xvEy4-ky4-URgqYdkXniZ0iZeFr-J3g/viewform?embedded=true",
     window: "https://docs.google.com/forms/d/e/1FAIpQLScazZUpNiqCkME4Gl1dEOy8YvOPMt3XmgeFz4WP76kPdfMUVw/viewform?embedded=true",
     landscaping: "https://docs.google.com/forms/d/e/1FAIpQLScbwadbOpNYJkbSqVYcW6lFbRXJcTl3xHW7wiC_677xITtrwQ/viewform?embedded=true"
+    // Add snow & odd job links when you have them
   };
 
   if (formMap[value]) {
