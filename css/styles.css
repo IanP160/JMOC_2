@@ -1,6 +1,117 @@
 /* Import Professional Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
+
+
+/* CTA Section - Adjust to Support Contact Form */
+#cta {
+    padding: 5em 0; /* Add spacing around it */
+    background-color: #ffffff; /* White background */
+    color: white; /* Keep text white */
+}
+
+#cta .inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* Allow full width */
+    padding: 2em; /* Adds spacing */
+}
+
+#cta .content-section {
+    max-width: 1200px; /* Ensures good width on larger screens */
+    margin: 0 auto; /* Centers it */
+}
+
+/* Contact Section - Ensure Layout is Correct */
+.container-content-contact {
+    display: flex;
+    flex-wrap: wrap;
+    background: white; /* White background for contrast */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Side */
+.container-content-contact .left {
+    background: #1B3A2B; /* Keep it burgundy */
+    color: white;
+    padding: 3em;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Right Side */
+.container-content-contact .right {
+    flex: 1;
+    padding: 3em;
+    min-width: 300px;
+
+}
+
+/* Form */
+.container-content-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container-content-contact form input,
+.container-content-contact form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #000; /* Ensure text color is black */
+    background-color: #fff; /* Make sure background is white */
+}
+
+/* Fix for white-on-white placeholder text */
+.container-content-contact form input::placeholder,
+.container-content-contact form textarea::placeholder {
+    color: #555 !important; /* Dark gray for better visibility */
+    opacity: 1 !important; /* Ensure placeholder is fully visible */
+}
+
+/* Ensure contrast for accessibility */
+.container-content-contact form label {
+    color: #333 !important; /* Darken labels */
+}
+
+/* Submit Button */
+.container-content-contact .btn-primary {
+    background-color: #1B3A2B;
+    border: none;
+    color: white;
+    padding: 0.75em 1.5em;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;  /* Flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.container-content-contact .btn-primary:hover {
+    background-color: #4CAF50;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 768px) {
+    .container-content-contact {
+        flex-direction: column;
+    }
+
+    .container-content-contact .left, 
+    .container-content-contact .right {
+        width: 100%;
+    }
+}
+
+
+
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
