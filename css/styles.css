@@ -1,105 +1,49 @@
 /* Import Professional Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-/* Header/Navbar */
-#header {
-    background: #ffffff; /* White background */
-    height: 4.75em;
-    left: 0;
-    line-height: 3em;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.2s ease;
+/* Custom Navbar Overrides */
+.navbar {
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-#header h1 {
-    height: inherit;
-    left: 1.25em;
-    line-height: inherit;
-    position: absolute;
-    top: 0;
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #000; /* Black text */
 }
 
-#header h1 a {
-    border: 0;
-    display: block;
-    height: inherit;
-    line-height: inherit;
-    color: #000000; /* Black text */
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    letter-spacing: 0.1em;
+.navbar .navbar-nav .nav-link {
+  color: #000; /* Black links */
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-#header nav {
-    height: inherit;
-    line-height: inherit;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0.75em;
+.navbar .navbar-nav .nav-link:hover {
+  color: #007bff; /* Blue hover */
 }
 
-#header nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
+.navbar .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-left: 1rem;
 }
 
-#header nav > ul > li {
-    display: inline-block;
-    padding: 0;
+.navbar .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
-#header nav > ul > li > a {
-    border: 0;
-    color: #000000; /* Black links */
-    display: block;
-    font-size: 0.8em;
-    letter-spacing: 0.225em;
-    padding: 0 1.5em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* Mobile toggle button color */
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
-#header nav > ul > li > a:hover {
-    color: #1B3A2B; /* Dark green on hover */
-}
-
-/* Menu toggle (hamburger) for mobile */
-#header nav > ul > li > a.menuToggle {
-    outline: 0;
-    position: relative;
-}
-
-#header nav > ul > li > a.menuToggle:after {
-    content: '';
-    background-image: url("images/bars.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 1.5em;
-    width: 1.5em;
-    filter: invert(1); /* Makes the icon black on white background */
-    margin-left: 0.5em;
-    vertical-align: middle;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 736px) {
-    #header h1 a {
-        font-size: 1em;
-    }
-    
-    #header nav > ul > li > a {
-        padding: 0 1em;
-    }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
