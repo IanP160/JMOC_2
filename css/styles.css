@@ -317,6 +317,36 @@ form {
     opacity: 1;
 }
 
+/* Preload Animation */
+body.is-preload * {
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+body:not(.is-preload) * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero Text Animation */
+.hero-overlay {
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
 /* Footer */
 footer {
     background-color: #000000;
