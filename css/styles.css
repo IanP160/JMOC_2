@@ -193,21 +193,6 @@ body {
     padding: 0;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #000000;
-    padding: 1rem;
-}
-
-.navbar-brand,
-.nav-link {
-    color: #FFFFFF !important; /* Ensures navbar text is visible */
-    font-weight: 600;
-}
-
-.nav-link:hover {
-    color: #4CAF50; /* Medium Green */
-}
 
 /* Hero Section */
 .hero {
