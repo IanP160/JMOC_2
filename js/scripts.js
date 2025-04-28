@@ -132,7 +132,7 @@ function loadGoogleForm() {
     pressure: "https://docs.google.com/forms/d/e/1FAIpQLScd593nR5DJau-RJc4xvEy4-ky4-URgqYdkXniZ0iZeFr-J3g/viewform?embedded=true",
     window: "https://docs.google.com/forms/d/e/1FAIpQLScazZUpNiqCkME4Gl1dEOy8YvOPMt3XmgeFz4WP76kPdfMUVw/viewform?embedded=true",
     landscaping: "https://docs.google.com/forms/d/e/1FAIpQLScbwadbOpNYJkbSqVYcW6lFbRXJcTl3xHW7wiC_677xITtrwQ/viewform?embedded=true"
-    // Add other links later
+    // Add snow, odd job, etc.
   };
 
   if (formMap[value]) {
@@ -148,5 +148,15 @@ function loadGoogleForm() {
       </iframe>`;
   } else {
     container.innerHTML = "";
+  }
+}
+
+// ============================
+// SCROLL DOWN ARROW LOGIC
+// ============================
+function scrollToForm() {
+  const formSection = document.getElementById("mega-form");
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: "smooth" });
   }
 }
