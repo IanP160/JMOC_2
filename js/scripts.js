@@ -1,4 +1,79 @@
 // ============================
+// PRELOAD, MOBILE MENU, SMOOTH SCROLL, HEADER ANIMATION
+// ============================
+(function($) {
+
+  var $window = $(window),
+      $body = $('body'),
+      $wrapper = $('#page-wrapper'),
+      $banner = $('#banner'),
+      $header = $('#header');
+
+  // Breakpoints
+  breakpoints({
+    xlarge: ['1281px', '1680px'],
+    large: ['981px', '1280px'],
+    medium: ['737px', '980px'],
+    small: ['481px', '736px'],
+    xsmall: [null, '480px']
+  });
+
+  // Initial animations
+  $window.on('load', function() {
+    window.setTimeout(function() {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
+
+  // Mobile?
+  if (browser.mobile)
+    $body.addClass('is-mobile');
+  else {
+    breakpoints.on('>medium', function() {
+      $body.removeClass('is-mobile');
+    });
+    breakpoints.on('<=medium', function() {
+      $body.addClass('is-mobile');
+    });
+  }
+
+  // Scrolly.
+  $('.scrolly')
+    .scrolly({
+      speed: 1500,
+      offset: $header.outerHeight()
+    });
+
+  // Mobile Menu
+  $('#menu')
+    .append('<a href="#menu" class="close"></a>')
+    .appendTo($body)
+    .panel({
+      delay: 500,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: 'right',
+      target: $body,
+      visibleClass: 'is-menu-visible'
+    });
+
+  // Header toggle
+  if ($banner.length > 0 && $header.hasClass('alt')) {
+    $window.on('resize', function() { $window.trigger('scroll'); });
+
+    $banner.scrollex({
+      bottom: $header.outerHeight() + 1,
+      terminate: function() { $header.removeClass('alt'); },
+      enter: function() { $header.addClass('alt'); },
+      leave: function() { $header.removeClass('alt'); }
+    });
+  }
+
+})(jQuery);
+
+// ============================
 // GALLERY SLIDESHOW LOGIC
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index);
   }
 
-  // Make navigation functions accessible from HTML buttons
+  // Make navigation functions accessible globally
   window.prevSlide = prevSlide;
   window.nextSlide = nextSlide;
   window.changeImage = changeImage;
@@ -57,7 +132,7 @@ function loadGoogleForm() {
     pressure: "https://docs.google.com/forms/d/e/1FAIpQLScd593nR5DJau-RJc4xvEy4-ky4-URgqYdkXniZ0iZeFr-J3g/viewform?embedded=true",
     window: "https://docs.google.com/forms/d/e/1FAIpQLScazZUpNiqCkME4Gl1dEOy8YvOPMt3XmgeFz4WP76kPdfMUVw/viewform?embedded=true",
     landscaping: "https://docs.google.com/forms/d/e/1FAIpQLScbwadbOpNYJkbSqVYcW6lFbRXJcTl3xHW7wiC_677xITtrwQ/viewform?embedded=true"
-    // Add snow & odd job links when you have them
+    // Add other links later
   };
 
   if (formMap[value]) {
