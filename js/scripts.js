@@ -93,29 +93,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showSlide(index) {
     currentSlide = index;
-    largeImage.src = galleryImages[currentSlide];
+
+    largeImage.classList.remove('active');
+
+    setTimeout(() => {
+      largeImage.src = galleryImages[currentSlide];
+      largeImage.onload = () => {
+        largeImage.classList.add('active');
+      };
+    }, 200);
 
     thumbnails.forEach((thumb, i) => {
-      thumb.classList.toggle("active", i === index);
+      thumb.classList.toggle("active", i === currentSlide);
     });
   }
 
-  window.nextSlide = function () {
+  function nextSlide() {
     currentSlide = (currentSlide + 1) % galleryImages.length;
     showSlide(currentSlide);
-  };
+  }
 
-  window.prevSlide = function () {
+  function prevSlide() {
     currentSlide = (currentSlide - 1 + galleryImages.length) % galleryImages.length;
     showSlide(currentSlide);
-  };
+  }
 
-  window.changeImage = function (index) {
+  function changeImage(index) {
     showSlide(index);
-  };
+  }
+
+  window.prevSlide = prevSlide;
+  window.nextSlide = nextSlide;
+  window.changeImage = changeImage;
 
   showSlide(currentSlide);
-  setInterval(window.nextSlide, 3000);
+
+  setInterval(nextSlide, 4000); // Auto rotate every 4 seconds
 });
 
 
