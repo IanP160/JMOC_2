@@ -78,13 +78,13 @@
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = [
-    "images/Gallery1.png",
-    "images/Gallery2.png",
-    "images/Gallery3.png",
-    "images/Gallery4.png",
-    "images/Gallery5.png",
-    "images/Gallery6.png",
-    "images/Gallery7.png"
+  "images/Gallery1.webp",
+  "images/Gallery2.webp",
+  "images/Gallery3.webp",
+  "images/Gallery4.webp",
+  "images/Gallery5.webp",
+  "images/Gallery6.webp",
+  "images/Gallery7.webp"
   ];
 
   let currentSlide = 0;
