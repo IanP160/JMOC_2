@@ -2,7 +2,6 @@
 // PRELOAD, MOBILE MENU, SMOOTH SCROLL, HEADER ANIMATION
 // ============================
 (function($) {
-
   var $window = $(window),
       $body = $('body'),
       $wrapper = $('#page-wrapper'),
@@ -20,7 +19,7 @@
 
   // Initial animations
   $window.on('load', function() {
-    window.setTimeout(function() {
+    setTimeout(function() {
       $body.removeClass('is-preload');
     }, 100);
   });
@@ -37,12 +36,11 @@
     });
   }
 
-  // Scrolly.
-  $('.scrolly')
-    .scrolly({
-      speed: 1500,
-      offset: $header.outerHeight()
-    });
+  // Scrolly
+  $('.scrolly').scrolly({
+    speed: 1500,
+    offset: $header.outerHeight()
+  });
 
   // Mobile Menu
   $('#menu')
@@ -94,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showSlide(index) {
     currentSlide = index;
 
+    // Hide image immediately
     largeImage.classList.remove('active');
 
     setTimeout(() => {
@@ -101,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
       largeImage.onload = () => {
         largeImage.classList.add('active');
       };
-    }, 200);
+    }, 100);
 
     thumbnails.forEach((thumb, i) => {
       thumb.classList.toggle("active", i === currentSlide);
@@ -131,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(nextSlide, 4000); // Auto rotate every 4 seconds
 });
 
-
 // ============================
 // GOOGLE FORM LOADER FUNCTION
 // ============================
@@ -144,7 +142,7 @@ function loadGoogleForm() {
     pressure: "https://docs.google.com/forms/d/e/1FAIpQLScd593nR5DJau-RJc4xvEy4-ky4-URgqYdkXniZ0iZeFr-J3g/viewform?embedded=true",
     window: "https://docs.google.com/forms/d/e/1FAIpQLScazZUpNiqCkME4Gl1dEOy8YvOPMt3XmgeFz4WP76kPdfMUVw/viewform?embedded=true",
     landscaping: "https://docs.google.com/forms/d/e/1FAIpQLScbwadbOpNYJkbSqVYcW6lFbRXJcTl3xHW7wiC_677xITtrwQ/viewform?embedded=true"
-    // Add snow, odd job, etc.
+    // Add snow, odd job if needed
   };
 
   if (formMap[value]) {
