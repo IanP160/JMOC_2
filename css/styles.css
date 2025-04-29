@@ -75,6 +75,30 @@
   border-radius: 4px;
 }
 
+#large-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+  outline: 2px solid #4CAF50;
+}
+
 /* CTA Section - Adjust to Support Contact Form */
 #cta {
     padding: 5em 0; /* Add spacing around it */
