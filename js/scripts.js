@@ -78,9 +78,13 @@
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = [
-    "https://via.placeholder.com/500x300?text=Image+1",
-    "https://via.placeholder.com/500x300?text=Image+2",
-    "https://via.placeholder.com/500x300?text=Image+3"
+    "images/Gallery1.png",
+    "images/Gallery2.png",
+    "images/Gallery3.png",
+    "images/Gallery4.png",
+    "images/Gallery5.png",
+    "images/Gallery6.png",
+    "images/Gallery7.png"
   ];
 
   let currentSlide = 0;
@@ -110,14 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index);
   }
 
-  // Make navigation functions accessible globally
   window.prevSlide = prevSlide;
   window.nextSlide = nextSlide;
   window.changeImage = changeImage;
 
-  // Start with the first slide and auto-rotate
   showSlide(currentSlide);
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 3000); // Auto-rotate every 3 seconds
 });
 
 // ============================
