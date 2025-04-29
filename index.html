@@ -65,24 +65,25 @@
 
 
 <!-- Gallery Section -->
-<!-- Gallery Section -->
 <section id="gallery" class="wrapper style2 special">
   <div class="gallery-container" style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
-    
+
+    <!-- Main Large Image Area -->
     <div class="gallery-main" style="position: relative; width: 500px; height: 500px;">
-      <button class="gallery-arrow left" onclick="prevSlide()">&#10094;</button>
-      <img id="large-image" src="images/Gallery1.webp" alt="Gallery Image" class="gallery-large" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-      <button class="gallery-arrow right" onclick="nextSlide()">&#10095;</button>
+      <button class="gallery-arrow left" onclick="prevSlide()" style="position: absolute; top: 50%; left: -40px; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #333; cursor: pointer;">&#10094;</button>
+      <img id="large-image" src="images/Gallery1.webp" alt="Gallery Image" loading="lazy" class="gallery-large" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+      <button class="gallery-arrow right" onclick="nextSlide()" style="position: absolute; top: 50%; right: -40px; transform: translateY(-50%); background: none; border: none; font-size: 2rem; color: #333; cursor: pointer;">&#10095;</button>
     </div>
-    
+
+    <!-- Thumbnail Images -->
     <div class="gallery-thumbnails" style="display: flex; flex-direction: column; gap: 10px;">
-      <img class="thumbnail" src="images/Gallery1.webp" onclick="changeImage(0)" alt="Thumb 1" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery2.webp" onclick="changeImage(1)" alt="Thumb 2" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery3.webp" onclick="changeImage(2)" alt="Thumb 3" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery4.webp" onclick="changeImage(3)" alt="Thumb 4" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery5.webp" onclick="changeImage(4)" alt="Thumb 5" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery6.webp" onclick="changeImage(5)" alt="Thumb 6" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
-      <img class="thumbnail" src="images/Gallery7.webp" onclick="changeImage(6)" alt="Thumb 7" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer;">
+      <img class="thumbnail active" src="images/Gallery1.webp" onclick="changeImage(0)" alt="Thumb 1" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery2.webp" onclick="changeImage(1)" alt="Thumb 2" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery3.webp" onclick="changeImage(2)" alt="Thumb 3" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery4.webp" onclick="changeImage(3)" alt="Thumb 4" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery5.webp" onclick="changeImage(4)" alt="Thumb 5" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery6.webp" onclick="changeImage(5)" alt="Thumb 6" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
+      <img class="thumbnail" src="images/Gallery7.webp" onclick="changeImage(6)" alt="Thumb 7" loading="lazy" style="width: 100px; height: 100px; object-fit: cover; cursor: pointer; border-radius: 5px;">
     </div>
 
   </div>
