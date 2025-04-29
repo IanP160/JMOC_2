@@ -78,13 +78,13 @@
 // ============================
 document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = [
-  "images/Gallery1.webp",
-  "images/Gallery2.webp",
-  "images/Gallery3.webp",
-  "images/Gallery4.webp",
-  "images/Gallery5.webp",
-  "images/Gallery6.webp",
-  "images/Gallery7.webp"
+    "images/Gallery1.webp",
+    "images/Gallery2.webp",
+    "images/Gallery3.webp",
+    "images/Gallery4.webp",
+    "images/Gallery5.webp",
+    "images/Gallery6.webp",
+    "images/Gallery7.webp"
   ];
 
   let currentSlide = 0;
@@ -100,27 +100,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function nextSlide() {
+  window.nextSlide = function () {
     currentSlide = (currentSlide + 1) % galleryImages.length;
     showSlide(currentSlide);
-  }
+  };
 
-  function prevSlide() {
+  window.prevSlide = function () {
     currentSlide = (currentSlide - 1 + galleryImages.length) % galleryImages.length;
     showSlide(currentSlide);
-  }
+  };
 
-  function changeImage(index) {
+  window.changeImage = function (index) {
     showSlide(index);
-  }
-
-  window.prevSlide = prevSlide;
-  window.nextSlide = nextSlide;
-  window.changeImage = changeImage;
+  };
 
   showSlide(currentSlide);
-  setInterval(nextSlide, 3000); // Auto-rotate every 3 seconds
+  setInterval(window.nextSlide, 3000);
 });
+
 
 // ============================
 // GOOGLE FORM LOADER FUNCTION
