@@ -60,6 +60,7 @@ body {
 .hero-overlay {
   padding: 2rem;
   border-radius: 10px;
+  padding-bottom: 100px; /* <-- NEW: Add extra padding at the bottom */
   animation: fadeInUp 1.5s ease forwards;
   opacity: 0;
 }
