@@ -252,6 +252,11 @@ form {
 .container-content-contact .btn-primary:hover {
   background-color: #4CAF50;
 }
+.container-contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* for breathing room on small screens */
+}
 
 /* Footer */
 footer {
